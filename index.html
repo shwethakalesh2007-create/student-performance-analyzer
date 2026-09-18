@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student Performance Analyzer</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        h2 {
+            color: #333333;
+        }
+
+        .box {
+            background-color: white;
+            padding: 25px;
+            margin: 20px auto;
+            max-width: 900px;
+            border-radius: 10px;
+        }
+
+        li {
+            margin: 10px;
+            text-align: left;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            background-color: #333333;
+            color: white;
+        }
+
+        td, th {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #cccccc;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .summary {
+            display: flex;
+            justify-content: space-around;
+            gap: 15px;
+        }
+
+        .card {
+            padding: 15px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            width: 20%;
+        }
+
+        .graph img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- MAIN WHITEE BOX -->
+
+    <div class="box">
+
+        <h1> Student Performance Analyzer</h1>
+
+
+        <h2>Welcome!</h2>
+
+        <p>
+            This website analyzes student performance
+            using Python and CSV data.
+        </p>
+
+
+        <!-- FEATURES -->
+
+        <h2>Features</h2>
+
+        <ul>
+
+            <li>Student Average</li>
+
+            <li>Grades and Results</li>
+
+            <li>Top Performer</li>
+
+            <li>Subject-wise Performance</li>
+
+            <li>Performance Graphs</li>
+
+        </ul>
+
+
+        <!-- STUDENT MARKS -->
+
+        <h2>Student Marks</h2>
+
+        <table>
+
+            <tr>
+
+                <th>Name</th>
+
+                <th>Maths</th>
+
+                <th>Python</th>
+
+                <th>DBMS</th>
+
+                <th>Data Structures</th>
+
+                <th>English</th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>arun</td>
+
+                <td>79</td>
+
+                <td>85</td>
+
+                <td>72</td>
+
+                <td>90</td>
+
+                <td>89</td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>rahul</td>
+
+                <td>64</td>
+
+                <td>25</td>
+
+                <td>68</td>
+
+                <td>75</td>
+
+                <td>72</td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>meera</td>
+
+                <td>72</td>
+
+                <td>79</td>
+
+                <td>95</td>
+
+                <td>90</td>
+
+                <td>94</td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>anu</td>
+
+                <td>75</td>
+
+                <td>90</td>
+
+                <td>72</td>
+
+                <td>45</td>
+
+                <td>85</td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>finn</td>
+
+                <td>12</td>
+
+                <td>20</td>
+
+                <td>10</td>
+
+                <td>45</td>
+
+                <td>36</td>
+
+            </tr>
+
+        </table>
+
+
+        <!-- RESULTS -->
+
+        <h2>Results</h2>
+
+        <table>
+
+            <tr>
+
+                <th>Name</th>
+
+                <th>Average</th>
+
+                <th>Grade</th>
+
+                <th>Result</th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>arun</td>
+
+                <td>83.00</td>
+
+                <td>A</td>
+
+                <td>PASS</td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>rahul</td>
+
+                <td>60.80</td>
+
+                <td>C</td>
+
+                <td>PASS</td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>meera</td>
+
+                <td>86.00</td>
+
+                <td>A</td>
+
+                <td>PASS</td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>anu</td>
+
+                <td>73.40</td>
+
+                <td>B</td>
+
+                <td>PASS</td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>finn</td>
+
+                <td>24.60</td>
+
+                <td>F</td>
+
+                <td>FAIL</td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+
+
+    <!-- PERFORMANCE SUMMARY -->
+
+    <div class="box">
+
+        <h2>🏆 Performance Summary</h2>
+
+
+        <div class="summary">
+
+
+            <div class="card">
+
+                <h3>🏆 Top Student</h3>
+
+                <p>meera</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3> Top Average</h3>
+
+                <p>86.00</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>✅ Passed</h3>
+
+                <p>4</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>❌ Failed</h3>
+
+                <p>1</p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- AVERAGE GRAPH -->
+
+    <div class="box">
+
+        <h2>📊 Student Average Marks</h2>
+
+        <p>
+            This bar chart shows the average marks
+            of each student.
+        </p>
+
+
+        <div class="graph">
+
+            <img src="average_graph.png"
+                 alt="Student Average Marks">
+
+        </div>
+
+    </div>
+
+
+
+    <!-- STACKED SUBJECT GRAPH -->
+
+    <div class="box">
+
+        <h2>📊 Subject-wise Performance</h2>
+
+        <p>
+            This stacked bar chart shows the marks
+            obtained by students in each subject.
+        </p>
+
+
+        <div class="graph">
+
+            <img src="subject_comparison.png"
+                 alt="Student Subject-wise Performance">
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
